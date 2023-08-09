@@ -24,8 +24,10 @@ public class FileSystemResourceDemo {
             System.out.println(resource.getDescription());
             InputStream inputStream = resource.getInputStream();
             byte[] bytes = new byte[1024];
-            while (inputStream.read(bytes) != -1) {
-                System.out.println(new String(bytes));
+            //记录当前读取的字符数量
+            int len = 0;
+            while ((len = inputStream.read(bytes)) != -1) {
+                System.out.println(new String(bytes,0,len));
             }
             inputStream.close();
         } catch (Exception e) {

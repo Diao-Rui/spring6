@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6cbd4c9-2e63-4876-85cc-8a358ce578a5" name="变更" comment="" />
+    <list default="true" id="c6cbd4c9-2e63-4876-85cc-8a358ce578a5" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-resource/src/main/java/com/ClassPathResourceDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-resource/src/main/java/com/ClassPathResourceDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-resource/src/main/java/com/FileSystemResourceDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-resource/src/main/java/com/FileSystemResourceDemo.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +29,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$PROJECT_DIR$/../../data/maven/repo/org/springframework/spring-beans/6.0.9/spring-beans-6.0.9-sources.jar!/org/springframework/beans/factory/annotation/Autowired.java" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -38,6 +47,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable": "ALL",
     "jdk.selected.JAVA_MODULE": "corretto-17",
@@ -67,7 +77,7 @@
       <recent name="aop.service" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.FileSystemResourceDemo">
+  <component name="RunManager" selected="应用程序.ClassPathResourceDemo">
     <configuration name="ClassPathResourceDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ClassPathResourceDemo" />
       <module name="spring-resource" />
@@ -129,8 +139,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.FileSystemResourceDemo" />
         <item itemvalue="应用程序.ClassPathResourceDemo" />
+        <item itemvalue="应用程序.FileSystemResourceDemo" />
         <item itemvalue="应用程序.UrlResourceDemo" />
         <item itemvalue="JUnit.TestAnno.test" />
         <item itemvalue="JUnit.BookTest.testCheck" />
@@ -154,11 +164,23 @@
       <workItem from="1691460142839" duration="19413000" />
       <workItem from="1691545897362" duration="7798000" />
       <workItem from="1691563718865" duration="2576000" />
+      <workItem from="1691574192648" duration="591000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

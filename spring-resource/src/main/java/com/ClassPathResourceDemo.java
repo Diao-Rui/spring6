@@ -27,8 +27,10 @@ public class ClassPathResourceDemo {
             //获取文件内容
             InputStream in = res.getInputStream();
             byte[] b = new byte[1024];
-            while(in.read(b)!=-1) {
-                System.out.println(new String(b));
+            //用来记录当前获取的字符数量
+            int len = 0;
+            while ((len = in.read(b)) != -1) {
+                System.out.println(new String(b, 0, len));
             }
             inputStream.close();
         } catch (Exception e) {
