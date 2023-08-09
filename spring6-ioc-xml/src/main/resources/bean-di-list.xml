@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="emp1" class="org.example.objectdi.Employee">
+        <property name="name" value="tom"/>
+        <property name="age" value="18"/>
+        <property name="hobbies">
+            <array>
+                <value>吃饭</value>
+                <value>睡觉</value>
+                <value>敲代码</value>
+            </array>
+        </property>
+    </bean>
+    <bean id="emp2" class="org.example.objectdi.Employee">
+        <property name="name" value="lucy"/>
+        <property name="age" value="21"/>
+        <!--        数组注入-->
+        <property name="hobbies">
+            <array>
+                <value>吃饭</value>
+                <value>睡觉</value>
+                <value>看电影</value>
+            </array>
+        </property>
+    </bean>
+    <bean id="depart" class="org.example.objectdi.Depart">
+        <property name="name" value="销售部"/>
+        <!--        集合注入（基本数据类型使用value，引入数据类型使用ref）-->
+        <property name="employees">
+            <list>
+                <ref bean="emp1"/>
+                <ref bean="emp2"/>
+            </list>
+        </property>
+    </bean>
+</beans>

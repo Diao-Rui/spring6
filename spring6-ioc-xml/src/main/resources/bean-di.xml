@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--    调用set方法注入-->
+    <bean id="book" class="org.example.di.Book">
+        <property name="name" value="java从入门到精通"/>
+        <property name="author" value="Diao Rui"/>
+    </bean>
+    <!--    基于构造器注入-->
+    <bean id="bookCon" class="org.example.di.Book">
+        <constructor-arg name="name" value="java开发"/>
+        <constructor-arg name="author" value="刁锐"/>
+    </bean>
+</beans>

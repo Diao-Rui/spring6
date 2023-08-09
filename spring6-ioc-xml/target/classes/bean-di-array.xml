@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--数组类型注入-->
+    <bean id="employee" class="org.example.objectdi.Employee">
+        <property name="name" value="lucy"/>
+        <property name="age" value="18"/>
+        <!--        对象注入-->
+        <property name="depart">
+            <bean class="org.example.objectdi.Depart">
+                <property name="name" value="工程部"/>
+            </bean>
+        </property>
+        <!--        数组注入-->
+        <property name="hobbies">
+            <array>
+                <value>吃饭</value>
+                <value>睡觉</value>
+                <value>敲代码</value>
+            </array>
+        </property>
+    </bean>
+</beans>

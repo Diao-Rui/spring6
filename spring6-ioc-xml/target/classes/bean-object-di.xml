@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--外部bean注入-->
+    <bean id="depart" class="org.example.objectdi.Depart">
+        <property name="name" value="工程部"/>
+    </bean>
+    <bean id="employee" class="org.example.objectdi.Employee">
+        <property name="name" value="lucy"/>
+        <property name="age" value="25"/>
+        <!--从外部连接对象注入-->
+        <property name="depart" ref="depart"/>
+    </bean>
+    <!--内部bean注入-->
+    <bean id="employee2" class="org.example.objectdi.Employee">
+        <property name="name" value="tom"/>
+        <property name="age" value="26"/>
+        <property name="depart">
+            <bean class="org.example.objectdi.Depart">
+                <property name="name" value="销售部"/>
+            </bean>
+        </property>
+    </bean>
+    <!--级联注入-->
+    <bean id="employee3" class="org.example.objectdi.Employee">
+        <property name="name" value="lili"/>
+        <property name="age" value="21"/>
+        <property name="depart" ref="depart"/>
+        <property name="depart.name" value="市场部"/>
+    </bean>
+</beans>

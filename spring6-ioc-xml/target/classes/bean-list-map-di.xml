@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--    定义集合注入-->
+    <util:list id="hobbies">
+        <value>吃饭</value>
+        <value>睡觉</value>
+        <value>打豆豆</value>
+    </util:list>
+    <!--    定义注入的map-->
+    <util:map id="teacherMap">
+        <entry key="英语" value-ref="t1"/>
+        <entry key="语文" value-ref="t2"/>
+    </util:map>
+    <!--    定义教师配置-->
+    <bean id="t1" class="org.example.diMap.Teacher">
+        <property name="tId" value="10001"/>
+        <property name="tName" value="lucy"/>
+    </bean>
+    <bean id="t2" class="org.example.diMap.Teacher">
+        <property name="tId" value="10002"/>
+        <property name="tName" value="tom"/>
+    </bean>
+    <!--    定义学生配置（使用P命名空间）-->
+    <bean id="student" class="org.example.diMap.Student" p:sId="100120" p:sName="lili"
+          p:hobbies-ref="hobbies" p:teacherMap-ref="teacherMap"/>
+</beans>

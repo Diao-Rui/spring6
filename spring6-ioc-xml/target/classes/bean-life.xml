@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="cat" class="org.example.life.Cat" init-method="initMethod" destroy-method="destroyMethod">
+        <property name="name" value="kitty"/>
+        <property name="age" value="18"/>
+    </bean>
+    <bean id="myBeanProcessor" class="org.example.life.MyBeanProcess"/>
+</beans>

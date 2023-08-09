@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="t1" class="org.example.diMap.Teacher">
+        <property name="tId" value="10001"/>
+        <property name="tName" value="lucy"/>
+    </bean>
+    <bean id="t2" class="org.example.diMap.Teacher">
+        <property name="tId" value="10002"/>
+        <property name="tName" value="curry"/>
+    </bean>
+    <bean id="student" class="org.example.diMap.Student">
+        <property name="sId" value="100101"/>
+        <property name="sName" value="tom"/>
+        <property name="teacherMap">
+            <map>
+                <entry key="英语" value-ref="t1"/>
+                <entry key="数学" value-ref="t2"/>
+            </map>
+        </property>
+    </bean>
+</beans>

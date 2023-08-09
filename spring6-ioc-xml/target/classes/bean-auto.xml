@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--    自动装配通过名称（ID）-->
+    <bean id="dogService" class="org.example.auto.service.DogServiceImpl" autowire="byName"/>
+    <bean id="dogController" class="org.example.auto.controller.DogController" autowire="byName"/>
+    <bean id="dogDao" class="org.example.auto.dao.DogDaoImpl"/>
+</beans>
